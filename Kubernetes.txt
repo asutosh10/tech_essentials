@@ -1,0 +1,90 @@
+It is a container orchestation tool
+
+Availability
+Scalability
+Disaster Recovery
+
+Node -> virtual or physical machine
+
+Kubelet -> It is a kebernetes process that makes it possible for cluster to talk to each other 
+
+Worker nodes -> Here the actual applications are running
+
+Master nodes -> Runs kubernetes processes that are necessary to run and manage the cluster properly
+	API Server -> entrypoint to kubernetes cluster
+	UI , API, CLI all talk to API server to connetct with the cluster
+
+Controller Manager -> keeps track of what is happening in the cluster
+Schedulers -> ensures pod placement
+etcd -> kubernetes backing store
+	stores the state of the container
+
+Virtual Network -> creates one unified machine
+
+Pod -> Smallest unit in kebernetes
+	Abstraction over container
+	1 application per pod
+	Each pod gets its own IP address (internal IP address)
+	Each time a pod dies a new IP address gets created
+
+Service -> It is a permanent IP address attached to a pod
+	Lifecycle of pod and service are not connected so even if the pod dies the IP remains same
+	2 types internal service (not accessible to the public, ex-db/ by default) and external service
+
+Ingress -> It is the actual IP that forwards to service
+	ex-> service can be https://4070.60.70
+	     ingress can be https://myapp.com
+
+ConfigMap -> External configuration of your application
+	stored in plain text
+
+Secret -> It is like ConfigMap but it is used to store secret data, credentials
+	stored in base64 encoded
+	and also other encryptions
+
+volume -> it maps the container to external storage(local/cloud)
+
+Deployment -> It is another abstraction over pods / Blueprint for pods
+	It is used for stateless apps
+
+StatefulSet -> It is also another abstraction over pods
+	It is used for stateful apps/databases
+
+Configuration File -> It is a yaml file given to the master node for deployments
+	has 3 parts -> metadata, specification, status
+
+minikube -> to run kubernetes on local, both worker and master are on the same node
+kubectl -> kubernetes CLI for both minikube as well as all kubernetes hosts
+
+kubectl get node -> shows all nodes
+
+kubectl get pod -> shows all pods
+
+kubectl get service -> shows all services
+
+kubectl apply -f <file_name> -> to create a yaml file in kubernetes cluster
+
+kubectl get all -> to get all deployments, services
+
+kubectl get configmap -> to get config map
+
+kubectl get secret -> to get secret
+
+kubectl --help
+
+kubectl get --help
+
+kubectl describe service/pod/configmap <name_of_the_component>
+
+kubectl logs <pod_name>
+
+kubectl get service/pod/node -o wide -> for a long description
+
+
+
+
+	
+
+
+
+

@@ -1,0 +1,4 @@
+FROM openjdk:8-jdk-alpine
+COPY target/vas-api-service.jar vas-api-service.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "vas-api-service.jar"]

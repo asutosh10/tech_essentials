@@ -1,0 +1,30 @@
+git config --global --edit -> to edit the username and email
+
+vim
+------
+c - change
+esc - get out of change
+:w - save
+:q - quit
+:u -- undo
+
+or
+
+git config --global user.name "<username>"
+git config --global user.email "<email>"
+
+git config --list -> to check edited username and email
+
+git checkout -b <name> -> creates a new branch from the existing branch
+git checkout <branch_name> -> changes to that branch
+git push origin <branch> -> pushes from local to that branch
+git pull origin <branch> -> pulls from azure/github/remote to local
+git remote -v -> shows the orgin specified
+git merge <branch_name> -> merges the specified branch to the current branch
+git branch -d <branch_name> -> deletes the specified branch from local
+git push origin --delete <branch_name> -> deletes a branch remotely
+git remote add origin <origin_name> -> adding a remote origin
+git log -> shows all the commit hashes with messages
+git reset -> unstages the changes
+git reset <commit_hash> -> unstages and uncommits to the specified hash but does not delete anything
+git reset --hard <commit_hash> -> unstages, uncommits and deletes the work tiil the hash

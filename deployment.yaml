@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: vas-api-service
+  name: vas-api-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vas-api-service
+  template:
+    metadata:
+      labels:
+        app: vas-api-service
+    spec:
+      containers:
+      - image: acrcins03ptewkub01.azurecr.io/vas-api-service:#{Build.BuildId}#
+        name: vas-api-service
+        imagePullPolicy : Always
+        ports:
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: vas-api-configmap
+        env:
+        - name: ms.sql.server.pwd
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets
+              key: MS_SQL_SERVER_PWD
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vas-api-service
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: rsg-cin-s03-pt-ew-01
+spec:
+  type: LoadBalancer
+  selector:
+    app: vas-api-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

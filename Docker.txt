@@ -1,0 +1,63 @@
+Container - It is a way to package application with all the necessary dependancies and configuration
+Image -> It is the actual package with its dependancies and configuration
+Once you pull and run it, it becomes an container with isolated environment (has its own port and virtual file system)
+
+docker pull <image_name> -> to pull an image from dockerhub/local(first checks locally)
+	for a specific version -> <image_name> : <version>
+
+docker run <image_name> -> to pull and run an image from dockerhub/local(first checks locally) 
+	for a specific version -> <image_name> : <version>
+docker run -d <image> -> runs the image in detached mode
+docker run -p <host>:<dockers_port> <image> -> to run with a specific port
+	--name <name_of_container> -> to specify a name
+	-e <env_var>=<env_var_value> -> to specify a environment variable, can get from documentation
+	-e.. -e.. -> for multiple env variables
+	--net <network_name> -> to specify a network	
+
+docker ps -> all the running containers
+docker ps -a -> shows all running and not running containers
+
+docker images -> shows all the images
+docker rm <cont_id> -> removes a container
+docker rmi <imageid> -> deletes an image
+docker stop <cont_id> -> to stop a container
+docker start <cont_id> / <name> -> to start a existing container
+docker logs <cont_id> / <name> -> shows logs / for debugging
+docker logs <cont_id> | tail -> shows the latest log
+docker exec -it <cont_id>/<name> /bin/bash or /bin/sh -> to get the terminal of the container for debugging
+	exit -> to get out og the terminal
+
+docker network ls -> to see all networks
+docker network create <network_name> -> creates a docker network where you can run multiple applications
+
+Docker Compose -> to have all the docker application run commands in a single yaml file in a structured way
+		  creates its own network automatically
+docker-compose -f <file_name> up -> starts all the containers specified with default network
+docker-compose -f <file_name> down -> stops all the containers with default network deleted
+
+Building a docker file
+	name has to be Dockerfile
+        first line of the file should be FROM <image>
+	ENV <var_name>=<value> -> if you need to specify env
+	RUN <linux commands> -> executed in the containers environment not in host (ex RUN mkdir -p/home/app	)
+	COPY <source> <destination> -> executed in host (ex COPY . /home/app)
+	CMD ["<commands>","<commands>"] -> entry point command in container (ex CMD ["node","server.js"])
+docker build -t <app_name>:<version> <location> (ex docker build -t myapp:1.0 .)
+
+docker volumes -> 3 types used for data persistence in docker
+	-v <host_location> <container_location> -> host volume
+	-v <container_location> -> anonymous volume (host location is automatically created by docker)
+	-v <name_on_host> : <container_location>
+container location is defined by docker
+
+
+
+
+
+
+
+
+
+
+
+
