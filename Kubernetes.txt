@@ -21,13 +21,15 @@ etcd -> kubernetes backing store
 
 Virtual Network -> creates one unified machine
 
-Pod -> Smallest unit in kebernetes
+Pod -> Smallest unit in kubernetes
 	Abstraction over container
 	1 application per pod
 	Each pod gets its own IP address (internal IP address)
 	Each time a pod dies a new IP address gets created
 
-Service -> It is a permanent IP address attached to a pod
+Service ->
+	It provides a single point of entry for accessing one or more pods 
+	It is a permanent IP address attached to a pod
 	Lifecycle of pod and service are not connected so even if the pod dies the IP remains same
 	2 types internal service (not accessible to the public, ex-db/ by default) and external service
 
@@ -44,8 +46,11 @@ Secret -> It is like ConfigMap but it is used to store secret data, credentials
 
 volume -> it maps the container to external storage(local/cloud)
 
+ReplicaSet -> it is a declarative way to manage pods
+
 Deployment -> It is another abstraction over pods / Blueprint for pods
 	It is used for stateless apps
+	it is a declarative way to manage pods using ReplicaSet
 
 StatefulSet -> It is also another abstraction over pods
 	It is used for stateful apps/databases
@@ -56,29 +61,63 @@ Configuration File -> It is a yaml file given to the master node for deployments
 minikube -> to run kubernetes on local, both worker and master are on the same node
 kubectl -> kubernetes CLI for both minikube as well as all kubernetes hosts
 
+kubectl version -> to get the version
+kubectl cluster-info -> information about the cluster
+
+running a pod
+---------------
+kubectl run <pod_name> --image=<image_name>
+kubectl port-forward <pod_name> 8080(external port/host port):8080(kubernetes port) ->
+	exposing to a port on the host
+	while running only pod using run or yaml 
+kubectl port-forward pod/<pod_name> 8080:8080 (while using deployment to run a pod)
+kubectl port-forward deployment/<deployment_name> 8080 (while using deployment to run a pod)
+kubectl port-forward service/<service_name> 8080 (while using deployment to run a pod)
+kubectl delete pod <pod_name> -> deleting a pod
+	deleting a pod makes kubernetes create another pod as it maintains the current state
+	have to delete the deployment in order to prevent kubernetes from creating a pod 
+kubectl delete deployment <deployment_name> -> deleting a deployment
+kubectl delete -f <file_name> -> deletes the pod mentioned in the file
+
+kubectl create -f <file_name> --dry-run --validate=true (default) -> to test the yaml
+kubectl create -f <file_name> -> to run the yaml
+kubectl create -f <file_name> --save-config -> to run the yaml
+kubectl apply -f <file_name> -> to run the yaml or update the existing
+kubectl edit -f <file_name> -> opens notepad in windows to edit the file
+
+kubectl describe pod <pod_name> -> gives the data related to that pod
+
+kubectl exec <pod_name> -it sh -> for entering into a container
+
 kubectl get node -> shows all nodes
-
-kubectl get pod -> shows all pods
-
+kubectl get pods -> shows all pods
+kubectl get deployments -> shows all deployments
+kubectl get deployment --show-labels -> list all deployments and their labels
+kubectl get deployment -l <name>=<value> (Ex- kubectl get deployment -l app=nginx)
+kubectl scale deployment <deplyment_name> --replicas=5
+kubectl scale -f <deployment_name> --replicas=5
+kubectl get pod <file_name>/<pod_name> -o yaml/json -> to show the yaml/json  data
 kubectl get service -> shows all services
-
-kubectl apply -f <file_name> -> to create a yaml file in kubernetes cluster
-
 kubectl get all -> to get all deployments, services
-
 kubectl get configmap -> to get config map
-
 kubectl get secret -> to get secret
-
-kubectl --help
-
+kubectl --help  
 kubectl get --help
-
+kubectl get service/pod/node -o wide -> for a long description
 kubectl describe service/pod/configmap <name_of_the_component>
 
 kubectl logs <pod_name>
 
-kubectl get service/pod/node -o wide -> for a long description
+kinds of deployments
+----------------------
+
+Rolling updates
+Blue-green updates
+Canary deployments
+Rollbacks
+
+
+
 
 
 

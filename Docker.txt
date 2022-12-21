@@ -48,7 +48,7 @@ docker volumes -> 3 types used for data persistence in docker
 	-v <host_location> <container_location> -> host volume
 	-v <container_location> -> anonymous volume (host location is automatically created by docker)
 	-v <name_on_host> : <container_location>
-container location is defined by docker
+		container location is defined by docker
 
 
 
