@@ -1,0 +1,46 @@
+What is JDK, JRE and JVM
+4 pillars
+	Inheritance
+	Polymorphism
+	Encapsulation
+	Abstraction
+Data Types
+	Stringbuilder ns StringBuffer
+	String vs New String
+	bytes of datatypes
+	Wrapper Class
+	Autoboxing and Unboxing
+Type Casting
+Access Modifiers
+Constructor
+Inheritance
+Overloading and Overriding
+this vs super
+finally vs final vs finalize
+Abstract
+Interface
+	Marker vs functional
+Collection
+	Arraylist vs LinkedList (uses and internal working)
+	Hashmap (Internal working)
+	Concurrent Hashmap
+	Hashset
+Exception Handling
+	try-catch
+	explicit throw
+	implicit throw
+	try-with
+hashcode vs equals
+Thread
+	Runnable Interface
+	Daemon tools
+File Handling
+	Reading and Writing
+Inner Class
+Anonymous Class
+Generic Classes
+Serialization
+Consumer, Predicate and Supplier
+Lambda
+Streams
+Heap Memory
