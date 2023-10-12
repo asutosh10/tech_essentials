@@ -20,6 +20,7 @@ finally vs final vs finalize
 Abstract
 Interface
 	Marker vs functional
+	Comparable vs Comparator
 Collection
 	Arraylist vs LinkedList (uses and internal working)
 	Hashmap (Internal working)
