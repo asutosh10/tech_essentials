@@ -27,6 +27,7 @@ Collection
 	Concurrent Hashmap
 	Hashset
 Exception Handling
+	Types-> Checked vs Unchecked
 	try-catch
 	explicit throw
 	implicit throw
