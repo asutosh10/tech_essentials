@@ -24,7 +24,9 @@ Interface
 Collection
 	Arraylist vs LinkedList (uses and internal working)
 	Hashmap (Internal working)
-	Concurrent Hashmap
+	Concurrent Hashmap vs hashmap
+	vector vs arraylist
+	failfast vs failsafe iterator
 	Hashset
 Exception Handling
 	Types-> Checked vs Unchecked
