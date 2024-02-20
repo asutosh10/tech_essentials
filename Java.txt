@@ -1,9 +1,10 @@
 What is JDK, JRE and JVM
 4 pillars
-	Inheritance
-	Polymorphism
+	Inheritance - > Exception inheritence
+	Polymorphism -> main method overloading
 	Encapsulation
 	Abstraction
+SOLID principles
 Data Types
 	Stringbuilder ns StringBuffer
 	String vs New String
@@ -12,13 +13,12 @@ Data Types
 	Autoboxing and Unboxing
 Type Casting
 Access Modifiers
-Constructor
-Inheritance
+Constructor / Constructor inheritance
 Overloading and Overriding
 this vs super
 finally vs final vs finalize
 Abstract
-Interface
+Interface -> Diamond Problem super keyword
 	Marker vs functional
 	Comparable vs Comparator
 Collection
@@ -38,13 +38,21 @@ hashcode vs equals
 Thread
 	Runnable Interface
 	Daemon tools
+	join(), wait(), notify(), notifyAll()
+	Thread Pool
+	Executor Service/ Implementations
+	Deadlock
+	BlockingQueue
 File Handling
-	Reading and Writing
+	Reading
+	Writing -> how to append
 Inner Class
 Anonymous Class
 Generic Classes
-Serialization
+Serialization -> transient || serailVersionUID
 Consumer, Predicate and Supplier
 Lambda
-Streams
-Heap Memory
+Streams -> map || fiter || forEach || Collectors. mapping || groupingBy || joining || IntStream || Stream<Object> || mapToObj || mapToInt
+Heap Memory and Stack Memory
+Old generation vs young generation
+Permgen vs metaspace
