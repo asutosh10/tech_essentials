@@ -44,6 +44,8 @@ Thread
 	Executor Service/ Implementations
 	Deadlock
 	BlockingQueue
+	CompletableFuture -> creation chaining, exception handling
+	Singleton Double lock mechanism
 File Handling
 	Reading
 	Writing -> how to append
