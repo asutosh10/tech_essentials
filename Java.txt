@@ -56,6 +56,8 @@ Serialization -> transient || serailVersionUID
 Consumer, Predicate and Supplier
 Lambda
 Streams -> map || fiter || forEach || Collectors. mapping || groupingBy || joining || IntStream || Stream<Object> || mapToObj || mapToInt
+	group by dept order by salary from list of employees
+	find the highest salary from a map (highest can be 2)
 Heap Memory and Stack Memory
 Old generation vs young generation
 Permgen vs metaspace
