@@ -1,0 +1,14 @@
+Why springboot
+Spring modules
+Application Context
+IOC and DI
+HTTP Status Codes
+  200 -> OK
+  201 -> Created
+  400 -> Bad Request
+  401 -> Authentication Error
+  403 -> Authorization Error
+  405 -> Method Not Allowed
+  415 -> Unsopported Media type
+  404 -> Not Found
+  501 -> Internal Server Error
