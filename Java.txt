@@ -1,4 +1,5 @@
 What is JDK, JRE and JVM
+What is JIT
 4 pillars
 	Inheritance - > Exception through classes in inheritence
 	Polymorphism -> main method overloading
