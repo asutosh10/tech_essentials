@@ -1,7 +1,13 @@
 Why springboot
 Spring modules
 Application Context
-IOC and DI
+IOC and DI (Types of DI)
+Which DI to prefer
+Cyclic dependency
+HTTP REST methods
+PUT vs POST
+Validating request parameters -> @Valid , @otNull, @Size(), @Min, @Max(), @Email -> InvalidMethodArgumentException
+Errors 
 HTTP Status Codes
   200 -> OK
   201 -> Created
@@ -64,3 +70,5 @@ Entity class relationships
 @OnetoMany 
 @ManytoOne
 @ManytoMany
+
+
