@@ -33,7 +33,7 @@ Collection
 	vector vs arraylist
 	failfast vs failsafe iterator
 Exception Handling
-	Types-> Checked vs Unchecked
+	Types-> Checked vs Unchecked (FileNotFoundException / IOException ) (ArithmeticException / NullPointerException )
 	order of exception catching
 	multiple exception caught in a line -> |
 	try-catch
@@ -57,7 +57,7 @@ File Handling
 Inner Class
 Anonymous Class
 Generic and wildcards -> bounding both
-Serialization -> transient || serailVersionUID
+Serialization -> transient || serailVersionUID || ClassNotFoundException 
 Consumer, Predicate and Supplier
 Lambda
 Streams -> map || fiter || forEach || Collectors. mapping || groupingBy || joining || IntStream || Stream<Object> || mapToObj || mapToInt
