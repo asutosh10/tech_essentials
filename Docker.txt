@@ -22,6 +22,8 @@ docker rm <cont_id> -> removes a container
 docker rmi <imageid> -> deletes an image
 docker stop <cont_id> -> to stop a container
 docker start <cont_id> / <name> -> to start a existing container
+docker pause -> to pause a container with the state intact
+docker unpause -> to unpause a container
 docker logs <cont_id> / <name> -> shows logs / for debugging
 docker logs <cont_id> | tail -> shows the latest log
 docker exec -it <cont_id>/<name> /bin/bash or /bin/sh -> to get the terminal of the container for debugging
@@ -29,7 +31,8 @@ docker exec -it <cont_id>/<name> /bin/bash or /bin/sh -> to get the terminal of 
 
 docker network ls -> to see all networks
 docker network create <network_name> -> creates a docker network where you can run multiple applications
-
+docker inspect ->  information about various Docker objects like images, containers, volumes, networks, nodes, etc
+docker scan -> scans the image for vulnerability Ex-> snyk
 Docker Compose -> to have all the docker application run commands in a single yaml file in a structured way
 		  creates its own network automatically
 docker-compose -f <file_name> up -> starts all the containers specified with default network
@@ -39,9 +42,14 @@ Building a docker file
 	name has to be Dockerfile
         first line of the file should be FROM <image>
 	ENV <var_name>=<value> -> if you need to specify env
+	WORKDIR /home/app
 	RUN <linux commands> -> executed in the containers environment not in host (ex RUN mkdir -p/home/app	)
 	COPY <source> <destination> -> executed in host (ex COPY . /home/app)
-	CMD ["<commands>","<commands>"] -> entry point command in container (ex CMD ["node","server.js"])
+	CMD ["<commands>","<commands>"] -> provides argument to entrypoint CMD ["myapp.jar"]
+	ENTRYPOINT ["java","-jar"] -> entry point command in containe
+
+There can be multiple CMD but the latest one will be considered. CMD can alos be overridden while running but there
+can be one entrypoint.
 docker build -t <app_name>:<version> <location> (ex docker build -t myapp:1.0 .)
 
 docker volumes -> 3 types used for data persistence in docker
