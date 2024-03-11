@@ -14,7 +14,7 @@ What is JIT
 	Abstraction -> constructor in abstract classes 
 Data Types
 	Stringbuilder ns StringBuffer
-	String vs New String
+	String vs New String | .intern()
 	bytes of datatypes
 	Wrapper Class || -128 to 127 Integer value will be equal rest not 124==124 565 != 565
 	Autoboxing and Unboxing
