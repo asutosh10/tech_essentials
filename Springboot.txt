@@ -7,7 +7,11 @@ Cyclic dependency
 HTTP REST methods
 PUT vs POST
 Validating request parameters -> @Valid , @otNull, @Size(), @Min, @Max(), @Email -> InvalidMethodArgumentException
-Errors 
+Errors while requestparam | MissingServletRequestParameterException, 
+requestheader | MissingRequestHeaderException,
+requestbody | HttpMessageNotReadableException(if not able to deserialize or datatype mismatch) or 400 error code
+resttemplate
+RestTenmplate -> getForObject(url, class), getForEntity(url, class), exchange(url,method,httpentity,class)
 HTTP Status Codes
   200 -> OK
   201 -> Created
