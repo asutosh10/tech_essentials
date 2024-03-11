@@ -1,11 +1,17 @@
 What is JDK, JRE and JVM
 What is JIT
 4 pillars
-	Inheritance - > Exception through classes in inheritence
-	Polymorphism -> main method overloading
+	Inheritance - > \
+		Exception through classes in inheritence
+		parent reference child object, what happens to instance/static variables/methods
+		why we need throws keyword
+		this vs super
+		Constructor inheritance
+	Polymorphism -> 
+		main method overloading
+		Overloading and Overriding
 	Encapsulation
 	Abstraction -> constructor in abstract classes 
-SOLID principles
 Data Types
 	Stringbuilder ns StringBuffer
 	String vs New String
@@ -14,14 +20,12 @@ Data Types
 	Autoboxing and Unboxing
 Type Casting
 Access Modifiers
-Constructor / Constructor inheritance
-Overloading and Overriding
-this vs super
-finally vs final vs finalize
 Abstract
 Interface -> Diamond Problem super keyword
 	Marker vs functional
 	Comparable vs Comparator
+SOLID principles
+finally vs final vs finalize
 Collection
 	Arraylist vs LinkedList (uses and internal working)
 	Hashmap (Internal working) -> null which bucket is it stored || Collision and rehashing || why implement both equals and hashcode
