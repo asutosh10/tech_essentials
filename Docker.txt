@@ -1,3 +1,4 @@
+Docker is an open source platform to build, deploy and run containerized applications. 
 Container - It is a way to package application with all the necessary dependancies and configuration
 Image -> It is the actual package with its dependancies and configuration
 Once you pull and run it, it becomes an container with isolated environment (has its own port and virtual file system)
