@@ -31,6 +31,7 @@ docker exec -it <cont_id>/<name> /bin/bash or /bin/sh -> to get the terminal of 
 	exit -> to get out og the terminal
 docker network ls -> to see all networks
 docker network create <network_name> -> creates a docker network where you can run multiple applications
+docker network rm <network_name>
 docker inspect ->  information about various Docker objects like images, containers, volumes, networks, nodes, etc
 docker info -> shows all the information related to docker environment
 docker scan -> scans the image for vulnerability Ex-> snyk
