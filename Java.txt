@@ -64,7 +64,8 @@ Lambda
 Streams -> map || fiter || forEach || Collectors. mapping || groupingBy || joining || IntStream || Stream<Object> || mapToObj || mapToInt
 	group by dept order by salary from list of employees
 	find the highest salary from a map (highest can be 2)
-Heap Memory and Stack Memory
+Heap Memory and Stack Memory 
+Phases of grabage collection -> Mark and Sweep phase
 Old generation vs young generation
 Permgen vs metaspace
 Design Patterns 
