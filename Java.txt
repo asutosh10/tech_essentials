@@ -1,5 +1,6 @@
 What is JDK, JRE and JVM
 What is JIT
+static block, instance block, constructor, instance method -> order of execution
 4 pillars
 	Inheritance - > \
 		Exception through classes in inheritence
