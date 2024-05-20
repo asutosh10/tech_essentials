@@ -15,6 +15,7 @@ RestTenmplate -> getForObject(url, class), getForEntity(url, class), exchange(ur
 HTTP Status Codes
   200 -> OK
   201 -> Created
+  204 -> No Content
   400 -> Bad Request
   401 -> Authentication Error
   403 -> Authorization Error
