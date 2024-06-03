@@ -45,11 +45,11 @@ hashcode vs equals
 Thread
 	Runnable Interface
 	Daemon tools
-	join(), wait(), notify(), notifyAll()
+	join(), wait(), notify(), notifyAll() -> OddEvenPrinter
 	Thread Pool
 	Executor Service/ Implementations
 	Deadlock
-	BlockingQueue
+	BlockingQueue -> Producer Consumer problem
 	CompletableFuture -> creation chaining, exception handling
 	Singleton Double lock mechanism
 File Handling
