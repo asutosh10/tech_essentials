@@ -47,6 +47,7 @@ Thread
 	Daemon tools
 	join(), wait(), notify(), notifyAll() -> OddEvenPrinter
 	Thread Pool
+	Thread Local
 	Executor Service/ Implementations
 	Deadlock
 	BlockingQueue -> Producer Consumer problem
