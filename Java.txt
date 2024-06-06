@@ -43,6 +43,7 @@ Exception Handling
 	try-with
 hashcode vs equals
 Thread
+	Thread Lifecycle
 	Runnable Interface
 	Daemon tools
 	join(), wait(), notify(), notifyAll() -> OddEvenPrinter
